@@ -218,13 +218,13 @@ page_count = nid < nr_local_numa
 
 ## 6. 关键接口一览
 
-| 方向 | 接口 | 位置 |
-| --- | --- | --- |
-| 用户 → 内核（扫描） | `ioctl(SMAP_ACCESS_ADD_PID)` | `plugins/smap/src/user/manage/access_ioctl.c:24`、`:64` |
-| 用户 → 内核（迁移） | `ioctl(SMAP_MIG_MIGRATE)` | `plugins/smap/src/user/manage/smap_ioctl.h:51` |
+| 方向          | 接口                                 | 位置                                                     |
+| ----------- | ---------------------------------- | ------------------------------------------------------ |
+| 用户 → 内核（扫描） | `ioctl(SMAP_ACCESS_ADD_PID)`       | `plugins/smap/src/user/manage/access_ioctl.c:24`、`:64` |
+| 用户 → 内核（迁移） | `ioctl(SMAP_MIG_MIGRATE)`          | `plugins/smap/src/user/manage/smap_ioctl.h:51`         |
 | 内核 → 用户（频次） | `/proc/smap/<pid>/mem_freq` + poll | `plugins/smap/src/kernel/scan/access_pid.c:598`、`:661` |
-| 用户态事件循环 | epoll 注册该 procfs | `plugins/smap/src/user/manage/thread.c:71`、`:82` |
-| 对外 SDK | `ubturbo_smap_*` | `plugins/smap/src/user/smap_interface.h:175-371` |
+| 用户态事件循环     | epoll 注册该 procfs                   | `plugins/smap/src/user/manage/thread.c:71`、`:82`       |
+| 对外 SDK      | `ubturbo_smap_*`                   | `plugins/smap/src/user/smap_interface.h:175-371`       |
 
 ## 7. 设计上的三个取舍
 
