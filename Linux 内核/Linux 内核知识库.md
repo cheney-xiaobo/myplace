@@ -18,8 +18,10 @@ tags:
 | [[内存管理总览]] | §0–§19 | 内存管理整体：分层全景、node/zone/page、buddy+PCP、slub/vmalloc、地址空间与缺页、回收、swap、NUMA、memcg/OOM、THP/KSM、观测调优 |
 | [[Page Cache 分析]] | §0–§10 | page cache 专文：核心设计、申请/释放、脏页限流（§4.7）、双阈值与 dirtyable memory（§8.3）、工程实践、ext4 vs XFS（§10 附录） |
 | [[内存回收观测与zone]] | §1–§8 | zone 的作用与回收观测：vmstat 计数器、zoneinfo 判读、tracepoint、PSI、memcg 视角、判定表 |
+| [[io_uring 接口与使用方式（OLK-6.6）]] | §0–§10 | SQ/CQ 与三条系统调用、liburing 流程、常用 opcode、SQPOLL/IOPOLL、固定资源、multishot、eventfd、生命周期、编译探测与容器排错 |
 | [[ARM64 TLBI 与 x86 TLB 失效]] | §1–§6 | TLBI 的粒度与编码、x86 为何没有对应机制、两边优化手段、本树 TLBID/TLBIP 实现、社区引进时间线 |
 | [[ARM64 TLBI 能力怎么用（6.6 与 6.10）]] | §0–§8 | 能力如何被检测与门控、怎么确认生效、该调哪些 API、退化阈值、6.6→6.12 的变化 |
+| [[ARM64 Linux 6.6 TLBI 失效场景与数据清理边界]] | §0–§7 | unmap/mprotect/回收、vmalloc/set_memory、ASID/VMID、KVM stage-2、SMMU/ATC 的失效场景，以及 D/I-cache、DMA 和真正清零的边界 |
 | [[Firecracker microVM 在 ARM 上的 TLB 刷新时机]] | §1–§7 | 四层失效域、启动/运行/pause/resume/snapshot/销毁各阶段是否刷、VMID 回卷与 dirty log 的放大效应、观测与优化 |
 | [[内存专题记忆]] | 索引型 | 文档地图、本树配置事实卡、主题索引、自纠错清单、更新日志 |
 
